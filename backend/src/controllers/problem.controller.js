@@ -119,32 +119,32 @@ export const getAllProblems = async (req, res) => {
   }
 };
 
-// export const getProblemById = async (req, res) => {
-//   const { id } = req.params;
+export const getProblemById = async (req, res) => {
+  const { id } = req.params;
 
-//   try {
-//     const problem = await db.problem.findUnique({
-//       where: {
-//         id,
-//       },
-//     });
+  try {
+    const problem = await db.problem.findUnique({
+      where: {
+        id,
+      },
+    });
 
-//     if (!problem) {
-//       return res.status(404).json({ error: "Problem not found." });
-//     }
+    if (!problem) {
+      return res.status(404).json({ error: "Problem not found." });
+    }
 
-//     return res.status(200).json({
-//       sucess: true,
-//       message: "Message Created Successfully",
-//       problem,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     return res.status(500).json({
-//       error: "Error While Fetching Problem by id",
-//     });
-//   }
-// };
+    return res.status(200).json({
+      sucess: true,
+      message: "Message Created Successfully",
+      problem,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      error: "Error While Fetching Problem by id",
+    });
+  }
+};
 
 // export const updateProblem = async (req, res) => {
 //   // id
