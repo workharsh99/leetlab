@@ -146,11 +146,11 @@ export const getProblemById = async (req, res) => {
   }
 };
 
-// export const updateProblem = async (req, res) => {
-//   // id
-//   // id--->problem ( condition)
-//   // baaki kaam same as create
-// };
+export const updateProblem = async (req, res) => {
+  // id
+  // id--->problem ( condition)
+  // baaki kaam same as create
+};
 
 // export const deleteProblem = async (req, res) => {
 //   const { id } = req.params;
